@@ -1,8 +1,5 @@
 pipeline {
    agent any
-    // triggers {
-    //     pollSCM '* H/5 * * *'
-    // }
     tools {
         nodejs "nodejs"
     }
@@ -13,18 +10,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-        // stage('Check if needed directory exists') {
-        //     steps {
-        //         script {
-        //             if (fileExists('dependency_check/npm')) {
-        //                 echo "Directory exists in current workspace."
-        //             } else {
-        //                 sh 'mkdir -p /dependency_check/npm/'
-        //                 echo "Directory created."
-        //             }
-        //         }
-        //     }
-        // }
+
         stage('Audit check') {
             steps {
                 echo 'Running npm audit...'
