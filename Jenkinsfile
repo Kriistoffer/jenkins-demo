@@ -4,9 +4,6 @@ pipeline {
             image 'node:latest'
         }
     }
-    environment {
-        HOME = '.'
-    }
     triggers {
         pollSCM '* * * * *'
     }
