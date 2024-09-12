@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     def output = sh (returnStdout: true, script: 'npm audit --json || true')
-                    env.audit = output
+                    env.audit = readJSON text: output
                     // echo "Output: ${output}"
                 }
             }
@@ -44,9 +44,7 @@ pipeline {
 
         stage('Handling the result') {
             steps {
-                // echo "Number of vulnerabilities found: ${env.audit.metadata.vulnerabilities.total}"
-                def json = readJSON text: ${env.audit}
-                echo "${json.metadata}"
+                echo "Number of vulnerabilities found: ${env.audit.metadata}"
             }
         }
     }
