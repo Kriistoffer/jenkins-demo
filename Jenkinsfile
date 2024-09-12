@@ -28,7 +28,7 @@ pipeline {
         stage('NPM Audit') {
             steps {
                 echo 'Running npm audit....'
-                sh 'npm audit > npm_audit.json || true' 
+                sh 'npm audit --json > npm_audit.json || true' 
             }
         }
     }
