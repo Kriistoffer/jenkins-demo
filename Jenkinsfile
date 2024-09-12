@@ -42,7 +42,7 @@ pipeline {
             steps {
                 script {
                     def result = readJSON(file: "./npm_audit.json")
-                    echo "Number of vulnerabilities found: ${result}"
+                    echo "Number of vulnerabilities found: ${result.metadata}"
                 }
             }
         }
