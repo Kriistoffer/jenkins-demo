@@ -44,7 +44,7 @@ pipeline {
 
         stage('Handling the result') {
             steps {
-                echo "Accessing the variable: ${env.audit}"
+                echo "Number of vulnerabilities found: ${env.audit.metadata.vulnerabilities.total}"
             }
         }
     }
