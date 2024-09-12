@@ -36,6 +36,7 @@ pipeline {
             steps {
                 script {
                     def output = sh (returnStdout: true, script: 'npm audit --json || true')
+                    env.audit = output
                     // echo "Output: ${output}"
                 }
             }
@@ -43,7 +44,7 @@ pipeline {
 
         stage('Handling the result') {
             steps {
-                echo "Accessing the variable: ${output}"
+                echo "Accessing the variable: ${env.audit}"
             }
         }
     }
