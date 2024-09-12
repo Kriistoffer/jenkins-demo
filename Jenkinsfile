@@ -45,7 +45,7 @@ pipeline {
         stage('Version check') {
             steps {
                 echo 'Running npm outdated...'
-                sh 'npm outdated > npm_outdated.json || true'
+                sh 'npm outdated --json > npm_outdated.json || true'
             }
         }
 
