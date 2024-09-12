@@ -38,7 +38,7 @@ pipeline {
                 script {
                     def result = readJSON(file: "./npm_audit.json")
                     echo "Number of vulnerabilities found: ${result.metadata.vulnerabilities.total} (${result.metadata.vulnerabilities.critical} critical, ${result.metadata.vulnerabilities.high} high, ${result.metadata.vulnerabilities.moderate} moderate, ${result.metadata.vulnerabilities.low} low, and ${result.metadata.vulnerabilities.info} info)."
-                    echo "Read the full report on ${BUILD_URL}/execution/node/3/ws/npm_audit.txt"
+                    echo "Read the full report on ${BUILD_URL}execution/node/3/ws/npm_audit.txt"
                 }
             }
         }
@@ -47,6 +47,7 @@ pipeline {
             steps {
                 echo 'Running npm outdated...'
                 sh 'npm outdated --json > npm_outdated.json || true'
+                sh 'npm outdated > npm_outdated.txt || true'
             }
         }
 
@@ -54,8 +55,10 @@ pipeline {
             steps {
                 script {
                     def result = readJSON(file: "./npm_outdated.json")
+                    echo "Number of outdated packages found: ${result.length()}"
                     // def result = readFile(file: "./npm_outdated.txt")
-                    echo "${result}"
+                    // echo "${result}"
+                    echo "Read the full report on ${BUILD_URL}execution/node/3/ws/npm_outdated.txt"
                 }
             }
         }
