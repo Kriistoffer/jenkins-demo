@@ -34,17 +34,14 @@ pipeline {
 
         stage('Test') {
             steps {
-                script {
-                    def output = sh (returnStdout: true, script: 'npm audit --json || true')
-                    env.audit = readJSON text: output
-                    // echo "Output: ${output}"
-                }
+                sh 'npm audit --json > npm_audit.json || true'
             }
         }
 
         stage('Handling the result') {
             steps {
-                echo "Number of vulnerabilities found: ${env.audit[0]}"
+                def result = readJSON(file: "./npm_audit.json")
+                echo "Number of vulnerabilities found: ${result}"
             }
         }
     }
