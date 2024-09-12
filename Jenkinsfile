@@ -1,5 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:latest'
+        }
+    }
+    environment {
+        HOME = '.'
+    }
     triggers {
         pollSCM '* * * * *'
     }
