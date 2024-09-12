@@ -13,22 +13,23 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Check if needed directory exists') {
+        // stage('Check if needed directory exists') {
+        //     steps {
+        //         script {
+        //             if (fileExists('dependency_check/npm')) {
+        //                 echo "Directory exists in current workspace."
+        //             } else {
+        //                 sh 'mkdir -p /dependency_check/npm/'
+        //                 echo "Directory created."
+        //             }
+        //         }
+        //     }
+        // }
+        stage('NPM Audit') {
             steps {
-                script {
-                    if (fileExists('dependency_check/npm')) {
-                        echo "Directory exists in current workspace."
-                    } else {
-                        sh 'mkdir -p /dependency_check/npm/'
-                        echo "Directory created."
-                    }
-                }
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
+                echo 'Running npm audit....'
                 sh '''
+                npm audit --json > npm_audit.json
                 '''
             }
         }
