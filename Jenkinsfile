@@ -36,14 +36,14 @@ pipeline {
             steps {
                 script {
                     def output = sh (returnStdout: true, script: 'npm audit --json || true')
-                    echo "Output: ${output}"
+                    // echo "Output: ${output}"
                 }
             }
         }
 
         stage('Handling the result') {
             steps {
-                echo 'POST TO SLACK HERE'
+                echo "Accessing the variable: ${output}"
             }
         }
     }
