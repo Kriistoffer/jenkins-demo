@@ -1,9 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:latest'
-        }
-    }
+   agent { 
+        node {
+            label 'docker-agent-alpine'
+            }
+      }
     triggers {
         pollSCM '* * * * *'
     }
