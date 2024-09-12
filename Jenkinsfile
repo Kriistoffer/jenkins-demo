@@ -25,25 +25,35 @@ pipeline {
         //         }
         //     }
         // }
-        stage('NPM Audit') {
+        stage('Audit check') {
             steps {
-                echo 'Running npm audit....'
+                echo 'Running npm audit...'
                 sh 'npm audit --json > npm_audit.json || true' 
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'npm audit --json > npm_audit.json || true'
-            }
-        }
-
-        stage('Handling the result') {
+        stage('Posting audit result') {
             steps {
                 script {
                     def result = readJSON(file: "./npm_audit.json")
                     echo "Number of vulnerabilities found: ${result.metadata.vulnerabilities.total} (${result.metadata.vulnerabilities.critical} critical, ${result.metadata.vulnerabilities.high} high, ${result.metadata.vulnerabilities.moderate} moderate, ${result.metadata.vulnerabilities.low} low, and ${result.metadata.vulnerabilities.info} info)."
                     echo "Read the full report on ${BUILD_URL}"
+                }
+            }
+        }
+
+        stage('Version check') {
+            steps {
+                echo 'Running npm outdated...'
+                sh 'npm outdated --json > npm_outdated.json || true'
+            }
+        }
+
+        stage('Posting version check result') {
+            steps {
+                script {
+                    def result = readJSON(file: "./npm_outdated.json")
+                    echo "${result}"
                 }
             }
         }
