@@ -20,7 +20,7 @@ pipeline {
                     if (fileExists('dependency_check/npm')) {
                         echo "Directory exists in current workspace."
                     } else {
-                        mkdir -p '/dependency_check/npm/'
+                        sh 'mkdir -p /dependency_check/npm/'
                         echo "Directory created."
                     }
                 }
