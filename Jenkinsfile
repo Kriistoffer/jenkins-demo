@@ -40,8 +40,10 @@ pipeline {
 
         stage('Handling the result') {
             steps {
-                def result = readJSON(file: "./npm_audit.json")
-                echo "Number of vulnerabilities found: ${result}"
+                script {
+                    def result = readJSON(file: "./npm_audit.json")
+                    echo "Number of vulnerabilities found: ${result}"
+                }
             }
         }
     }
