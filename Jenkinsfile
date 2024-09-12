@@ -55,7 +55,7 @@ pipeline {
             steps {
                 script {
                     def result = readJSON(file: "./npm_outdated.json")
-                    echo "Number of outdated packages found: ${result.length()}"
+                    echo "Number of outdated packages found: ${result.size()}"
                     // def result = readFile(file: "./npm_outdated.txt")
                     // echo "${result}"
                     echo "Read the full report on ${BUILD_URL}execution/node/3/ws/npm_outdated.txt"
