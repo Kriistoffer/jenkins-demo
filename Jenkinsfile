@@ -45,15 +45,15 @@ pipeline {
         stage('Version check') {
             steps {
                 echo 'Running npm outdated...'
-                sh 'npm outdated > npm_outdated.txt || true'
+                sh 'npm outdated > npm_outdated.json || true'
             }
         }
 
         stage('Posting version check result') {
             steps {
                 script {
-                    // def result = readJSON(file: "./npm_outdated.json")
-                    def result = readFile(file: "./npm_outdated.txt")
+                    def result = readJSON(file: "./npm_outdated.json")
+                    // def result = readFile(file: "./npm_outdated.txt")
                     echo "${result}"
                 }
             }
