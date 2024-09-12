@@ -3,6 +3,9 @@ pipeline {
     // triggers {
     //     pollSCM '* H/5 * * *'
     // }
+    tools {
+        nodejs "nodejs"
+    }
     stages {
         stage('NPM') {
             steps {
