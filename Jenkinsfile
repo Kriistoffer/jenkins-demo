@@ -28,17 +28,13 @@ pipeline {
         stage('NPM Audit') {
             steps {
                 echo 'Running npm audit....'
-                script {
-                    NPM_AUDIT (
-                        sh 'npm audit --json || true'
-                    ).trim()
-                }
+                sh 'npm audit --json || true' 
             }
         }
 
         stage('Handling the result') {
             steps {
-                echo ${NPM_AUDIT}
+                echo 'POST TO SLACK HERE'
             }
         }
     }
