@@ -44,7 +44,7 @@ pipeline {
 
         stage('Handling the result') {
             steps {
-                echo "Number of vulnerabilities found: ${env.audit}"
+                echo "Number of vulnerabilities found: ${env.audit[0]}"
             }
         }
     }
