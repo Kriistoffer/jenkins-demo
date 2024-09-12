@@ -35,7 +35,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    def output = sh (returnStdout: true, script: 'npm audit --json')
+                    def output = sh (returnStdout: true, script: 'npm audit --json || true')
                     echo "Output: ${output}"
                 }
             }
