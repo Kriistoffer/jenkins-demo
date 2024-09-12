@@ -28,7 +28,13 @@ pipeline {
         stage('NPM Audit') {
             steps {
                 echo 'Running npm audit....'
-                sh 'npm audit --json > npm_audit.json || true' 
+                def output = sh 'npm audit --json || true' 
+            }
+        }
+
+        stage('Handling the result') {
+            steps {
+                echo output
             }
         }
     }
