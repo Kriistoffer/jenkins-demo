@@ -29,6 +29,7 @@ pipeline {
             steps {
                 echo 'Running npm audit...'
                 sh 'npm audit --json > npm_audit.json || true' 
+                sh 'npm audit > npm_audit.txt || true'
             }
         }
 
@@ -37,7 +38,7 @@ pipeline {
                 script {
                     def result = readJSON(file: "./npm_audit.json")
                     echo "Number of vulnerabilities found: ${result.metadata.vulnerabilities.total} (${result.metadata.vulnerabilities.critical} critical, ${result.metadata.vulnerabilities.high} high, ${result.metadata.vulnerabilities.moderate} moderate, ${result.metadata.vulnerabilities.low} low, and ${result.metadata.vulnerabilities.info} info)."
-                    echo "Read the full report on ${BUILD_URL}"
+                    echo "Read the full report on ${BUILD_URL}/execution/node/3/ws/npm_audit.txt"
                 }
             }
         }
