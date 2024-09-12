@@ -8,18 +8,22 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-        stage('Build') {
+        stage('NPM') {
             steps {
-                echo "Building.."
-                sh '''
-                '''
+                echo "Installing npm.."
+                sh 'npm install'
             }
         }
-        stage('Test') {
+        stage('Check if needed directory exists') {
             steps {
-                echo "Testing.."
-                sh '''
-                '''
+                script {
+                    if (fileExists('dependency_check/npm')) {
+                        echo "Directory exists in current workspace."
+                    } else {
+                        mkdir -p '/dependency_check/npm/'
+                        echo "Directory created."
+                    }
+                }
             }
         }
         stage('Deliver') {
