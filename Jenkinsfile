@@ -14,7 +14,7 @@ pipeline {
                     for (int i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "${i}"
 
-                        for (int j = 0; j < vulnerabilities.projects[i].frameworks.transitivePackages[j].size()) {
+                        for (int j = 0; j < vulnerabilities.projects[i].frameworks.transitivePackages[j].size(); j++) {
                             echo "Antal transitiva sårbarheter: ${j + 1}"
                         }
                     }
