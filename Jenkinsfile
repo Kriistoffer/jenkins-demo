@@ -13,6 +13,10 @@ pipeline {
 
                     for (int i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "${i}"
+
+                        for (int j = 0; j < vulnerabilities.projects[i].frameworks.size(); j++) {
+                            echo "${j}"
+                        }
                     }
                 }
             }
