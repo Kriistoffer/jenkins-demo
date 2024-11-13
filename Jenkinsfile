@@ -11,15 +11,15 @@ pipeline {
 
                     echo "${vulnerabilities.projects.size()}"
 
-                    echo "${vulnerabilities.projects[0].frameworks[0].transitivePackages[1].vulnerabilities.size()}"
+                    echo "${vulnerabilities.projects[i].frameworks[0].transitivePackages[j].vulnerabilities.size()}"
 
-                    // for (int i = 0; i < vulnerabilities.projects.size(); i++) {
-                    //     echo "${i}"
+                    for (int i = 0; i < vulnerabilities.projects.size(); i++) {
+                        echo "${vulnerabilities.projects[i].path}"
 
-                    //     for (int j = 0; j < vulnerabilities.projects[i].frameworks.transitivePackages[j].size(); j++) {
-                    //         echo "Antal transitiva sårbarheter: ${j + 1}"
-                    //     }
-                    // }
+                        for (int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages[j].size(); j++) {
+                            echo "${vulnerabilities.projects[i].frameworks[0].transitivePackages[j].id}"
+                        }
+                    }
                 }
             }
         }
