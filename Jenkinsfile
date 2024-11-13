@@ -10,6 +10,10 @@ pipeline {
                     def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
 
                     echo "${vulnerabilities.projects.size()}"
+
+                    for (int i = 0; i < vulnerabilities.projects.size(); i++) {
+                        echo "${i}"
+                    }
                 }
             }
         }
