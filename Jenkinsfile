@@ -11,7 +11,7 @@ pipeline {
 
                     echo "${vulnerabilities.projects.size()}"
 
-                    echo "${vulnerabilities.projects[0].frameworks.transitivePackages[0].size()}"
+                    echo "${vulnerabilities.projects[0].frameworks.transitivePackages[0].vulnerabilities.size()}"
 
                     // for (int i = 0; i < vulnerabilities.projects.size(); i++) {
                     //     echo "${i}"
