@@ -1,3 +1,5 @@
+int i
+int j
 pipeline {
    agent any
     tools {
@@ -12,7 +14,6 @@ pipeline {
                     echo "${vulnerabilities.projects.size()}"
 
                     echo "${vulnerabilities.projects[i].frameworks[0].transitivePackages[j].vulnerabilities.size()}"
-                    int i, j
                     for (i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "${vulnerabilities.projects[i].path}"
 
