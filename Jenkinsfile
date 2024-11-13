@@ -1,5 +1,5 @@
-int i
-int j
+def i
+def j
 pipeline {
    agent any
     tools {
