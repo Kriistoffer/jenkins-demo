@@ -4,47 +4,12 @@ pipeline {
         nodejs "nodejs"
     }
     stages {
-        stage('NPM') {
-            steps {
-                echo "Installing npm.."
-                sh 'npm install'
-            }
-        }
-
-        stage('Audit check') {
-            steps {
-                echo 'Running npm audit...'
-                sh 'npm audit --json > npm_audit.json || true' 
-                sh 'npm audit > npm_audit.txt || true'
-            }
-        }
-
-        stage('Posting audit result') {
+        stage("Räkna sårbarheter") {
             steps {
                 script {
-                    def result = readJSON(file: "./npm_audit.json")
-                    echo "Number of vulnerabilities found: ${result.metadata.vulnerabilities.total} (${result.metadata.vulnerabilities.critical} critical, ${result.metadata.vulnerabilities.high} high, ${result.metadata.vulnerabilities.moderate} moderate, ${result.metadata.vulnerabilities.low} low, and ${result.metadata.vulnerabilities.info} info)."
-                    echo "Read the full report on ${BUILD_URL}execution/node/3/ws/npm_audit.txt"
-                }
-            }
-        }
+                    def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
 
-        stage('Version check') {
-            steps {
-                echo 'Running npm outdated...'
-                sh 'npm outdated --json > npm_outdated.json || true'
-                sh 'npm outdated > npm_outdated.txt || true'
-            }
-        }
-
-        stage('Posting version check result') {
-            steps {
-                script {
-                    def result = readJSON(file: "./npm_outdated.json")
-                    echo "Number of outdated packages found: ${result.size()}"
-                    // def result = readFile(file: "./npm_outdated.txt")
-                    // echo "${result}"
-                    echo "Read the full report on ${BUILD_URL}execution/node/3/ws/npm_outdated.txt"
+                    echo "${vulnerabilities.size()}"
                 }
             }
         }

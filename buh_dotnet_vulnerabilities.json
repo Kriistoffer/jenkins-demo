@@ -1,0 +1,426 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Application/Buh.Application.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.ApplicationTests/Buh.ApplicationTests.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Domain/Buh.Domain.csproj"
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.DomainTests/Buh.DomainTests.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.IntegrationApiTests/Buh.IntegrationApiTests.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.3",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Logging/Buh.Logging.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.IntegrationApi/Buh.IntegrationApi.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "System.Text.Json",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ],
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Persistence/Buh.Persistence.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.DbMigrationService/Buh.DbMigrationService.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.Text.Json",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.AdminApi/Buh.AdminApi.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "System.Text.Json",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-8g4q-xg66-9fp4"
+                }
+              ]
+            }
+          ],
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Caching.Memory",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            },
+            {
+              "id": "System.IO.Packaging",
+              "resolvedVersion": "8.0.0",
+              "vulnerabilities": [
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "severity": "High",
+                  "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
