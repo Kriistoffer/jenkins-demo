@@ -15,7 +15,7 @@ pipeline {
                         echo "${i}"
 
                         for (int j = 0; j < vulnerabilities.projects[i].frameworks.size(); j++) {
-                            echo "${j}"
+                            echo "Värdet på j när i har värdet (${i}): ${j}"
                         }
                     }
                 }
