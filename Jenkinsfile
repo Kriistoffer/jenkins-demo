@@ -13,11 +13,12 @@ pipeline {
                     for(int i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "i har nu värdet: ${i}"
 
-                        if (vulnerabilities.projects[i].frameworks[0] != null && vulnerabilities.projects[i].frameworks[0].transitivePackages != null) {
-                            for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
-                                echo "j har nu värdet: ${j}"
-                                number_of_transitive++
-                            }
+                        if (vulnerabilities.projects[i].frameworks != null) {
+                            echo "frameworks not null in project ${i}"
+                            // for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
+                            //     echo "j har nu värdet: ${j}"
+                            //     number_of_transitive++
+                            // }
                         }
                     }
 
