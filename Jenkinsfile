@@ -9,7 +9,7 @@ pipeline {
                 script {
                     def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
 
-                    echo "${vulnerabilities.projects[0].frameworks[0].transitivePackages[0]}"
+                    echo "${vulnerabilities.projects[0].frameworks[0].transitivePackages[0].vulnerabilities.size()}"
                 }
             }
         }
