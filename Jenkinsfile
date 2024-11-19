@@ -11,8 +11,8 @@ pipeline {
                     def number_of_vulnerabilities = 0
 
 
-                    for(int i = 0; i < vulnerabilities.projects[0].frameworks[0].transitivePackages.size(); i++) {
-                        echo "i har nu värdet: ${i}"
+                    for(int j = 0; j < vulnerabilities.projects[0].frameworks[0].transitivePackages.size(); j++) {
+                        echo "j har nu värdet: ${j}"
                         number_of_vulnerabilities++
                     }
                     echo "Number of vuln found: ${number_of_vulnerabilities}"
