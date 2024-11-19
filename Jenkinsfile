@@ -35,7 +35,21 @@ pipeline {
                     }
 
                     for(int i = 0; i < outdated.projects.size(); i++) {
-                        echo "i har värdet: ${i}"
+                        if (outdated.projects[i].frameworks != null) {
+                            if (outdated.projects[i].frameworks[0].topLevelPackages != null) {
+                                for(int j = 0; j < outdated.projects[i].frameworks[0].topLevelPackages.size())
+                                    outdated_toplevel++
+                            }
+                        }
+                    }
+
+                    for(int i = 0; i < outdated.projects.size(); i++) {
+                        if (outdated.projects[i].frameworks != null) {
+                            if (outdated.projects[i].frameworks[0].transitivePackages != null) {
+                                for(int j = 0; j < outdated.projects[i].frameworks[0].transitivePackages.size())
+                                    outdated_transitive++
+                            }
+                        }
                     }
 
 
@@ -44,6 +58,9 @@ pipeline {
 
                     echo "Number of top level found: ${vuln_toplevel}"
                     echo "Number of transitive found: ${vuln_transitive}"
+
+                    echo "Number of outdated top level found: ${outdated_toplevel}"
+                    echo "Number of outdated transitive found: ${outdated_transitive}"
                 }
             }
         }
