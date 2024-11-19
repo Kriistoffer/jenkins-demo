@@ -58,13 +58,13 @@ pipeline {
 
                     def now = new Date()
 
-                    if (outdated_toplevel + outdated_transitive > 99) {
+                    if (outdated_toplevel + outdated_transitive > 0) {
                         slackSend(channel: "#team1-dependency_check", message: "- KRIJ - ${outdated_toplevel + outdated_transitive} utdaterade paket hittade (${outdated_toplevel} top-level och ${outdated_transitive} transitiva.)")
                     } else {
                         slackSend(channel: "#team1-dependency_check", message: "- KRIJ - Dependency scanning genomfördes ${now.format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+2"))} och inga utdaterade paket hittades")
                     } 
                     
-                    if (vuln_toplevel + vuln_transitive > 99) {
+                    if (vuln_toplevel + vuln_transitive > 0) {
                         slackSend(channel: "#team1-dependency_check", message: "- KRIJ - ${vuln_toplevel + vuln_transitive} sårbarheter hittade (${vuln_toplevel} top-level och ${vuln_transitive} transitiva.)")
                     } else {
                         slackSend(channel: "#team1-dependency_check", message: "- KRIJ - Dependency scanning genomfördes ${now.format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+2"))} och inga sårbarheter hittades")
