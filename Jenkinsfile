@@ -13,7 +13,7 @@ pipeline {
                     for(int i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "i har nu värdet: ${i}"
 
-                        if (!vulnerabilities.projects[i].frameworks[0].transitivePackages === null) {
+                        if (vulnerabilities.projects[i].frameworks[0].transitivePackages != null) {
                             for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
                                 echo "j har nu värdet: ${j}"
                                 number_of_transitive++
