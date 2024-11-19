@@ -10,7 +10,7 @@ pipeline {
                     def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
                     def number_of_transitive = 0
 
-                    for(int i = 0; i < vulnerabilities.projects.size()) {
+                    for(int i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "i har nu värdet: ${i}"
                     }
                     for(int j = 0; j < vulnerabilities.projects[0].frameworks[0].transitivePackages.size(); j++) {
