@@ -9,8 +9,8 @@ pipeline {
                 script {
                     def vulnerabilities = readJSON(file: "./dotnet_vulnerabilities.json")
                     def outdated = readJSON(file: "./dotnet_outdated.json")
-                    def vuln_toplevel = 0
-                    def vuln_transitive = 0
+                    int vuln_toplevel = 0
+                    int vuln_transitive = 0
                     int outdated_toplevel = 0
                     int outdated_transitive = 0
 
@@ -57,9 +57,7 @@ pipeline {
                     echo "Number of outdated transitive found: ${outdated_transitive}"
 
                     int total = outdated_transitive + outdated_toplevel
-                    echo "Totalt: ${total}"
-
-                    slackSend(channel: "#team1-dependency_check", message: "Test.")
+                    slackSend(channel: "#team1-dependency_check", message: "${outdated_toplevel + outdated_transitive} utdaterade paket hittade (${outdated_toplevel} top-level och ${outdated_transitive} transitiva.)")
                 }
             }
         }
