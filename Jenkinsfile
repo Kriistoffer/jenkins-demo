@@ -15,10 +15,10 @@ pipeline {
 
                         if (vulnerabilities.projects[i].frameworks != null) {
                             echo "frameworks not null in project ${i}"
-                            // for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
-                            //     echo "j har nu värdet: ${j}"
-                            //     number_of_transitive++
-                            // }
+                            for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
+                                echo "j har nu värdet: ${j}"
+                                number_of_transitive++
+                            }
                         }
                     }
 
