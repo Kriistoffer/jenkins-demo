@@ -1,5 +1,3 @@
-def i
-def j
 pipeline {
    agent any
     tools {
@@ -11,15 +9,7 @@ pipeline {
                 script {
                     def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
 
-                    echo "${vulnerabilities.projects.size()}"
-
-                    echo "${vulnerabilities.projects[i].frameworks[0].transitivePackages[j].vulnerabilities.size()}"
-                    for (i = 0; i < vulnerabilities.projects.size(); i++) {
-                        echo "${vulnerabilities.projects[i].path}"
-
-                        for (j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages[j].size(); j++) {
-                            echo "${vulnerabilities.projects[i].frameworks[0].transitivePackages[j].id}"
-                        }
+                    echo "${vulnerabilities.projects[0]}"
                     }
                 }
             }
