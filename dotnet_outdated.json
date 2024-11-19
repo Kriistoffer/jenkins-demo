@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "parameters": "--outdated",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Application/Buh.Application.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "DocumentFormat.OpenXml",
+              "requestedVersion": "3.0.2",
+              "resolvedVersion": "3.0.2",
+              "latestVersion": "3.1.1"
+            },
+            {
+              "id": "HtmlAgilityPack",
+              "requestedVersion": "1.11.61",
+              "resolvedVersion": "1.11.61",
+              "latestVersion": "1.11.71"
+            },
+            {
+              "id": "Markdig",
+              "requestedVersion": "0.36.2",
+              "resolvedVersion": "0.36.2",
+              "latestVersion": "0.38.0"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Design",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Proxies",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Hosting",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "reverseMarkdown",
+              "requestedVersion": "4.4.0",
+              "resolvedVersion": "4.4.0",
+              "latestVersion": "4.6.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.ApplicationTests/Buh.ApplicationTests.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "17.9.0",
+              "resolvedVersion": "17.9.0",
+              "latestVersion": "17.11.1"
+            },
+            {
+              "id": "Moq",
+              "requestedVersion": "4.20.70",
+              "resolvedVersion": "4.20.70",
+              "latestVersion": "4.20.72"
+            },
+            {
+              "id": "xunit",
+              "requestedVersion": "2.7.0",
+              "resolvedVersion": "2.7.0",
+              "latestVersion": "2.9.2"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "2.5.7",
+              "resolvedVersion": "2.5.7",
+              "latestVersion": "2.8.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Domain/Buh.Domain.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "Microsoft.Extensions.Logging",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.DomainTests/Buh.DomainTests.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "17.9.0",
+              "resolvedVersion": "17.9.0",
+              "latestVersion": "17.11.1"
+            },
+            {
+              "id": "Moq",
+              "requestedVersion": "4.20.70",
+              "resolvedVersion": "4.20.70",
+              "latestVersion": "4.20.72"
+            },
+            {
+              "id": "xunit",
+              "requestedVersion": "2.7.0",
+              "resolvedVersion": "2.7.0",
+              "latestVersion": "2.9.2"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "2.5.7",
+              "resolvedVersion": "2.5.7",
+              "latestVersion": "2.8.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.IntegrationApiTests/Buh.IntegrationApiTests.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "17.9.0",
+              "resolvedVersion": "17.9.0",
+              "latestVersion": "17.11.1"
+            },
+            {
+              "id": "Moq",
+              "requestedVersion": "4.20.70",
+              "resolvedVersion": "4.20.70",
+              "latestVersion": "4.20.72"
+            },
+            {
+              "id": "xunit",
+              "requestedVersion": "2.7.0",
+              "resolvedVersion": "2.7.0",
+              "latestVersion": "2.9.2"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "2.5.7",
+              "resolvedVersion": "2.5.7",
+              "latestVersion": "2.8.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Logging/Buh.Logging.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "Microsoft.Extensions.DependencyInjection",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Abstractions",
+              "requestedVersion": "8.0.1",
+              "resolvedVersion": "8.0.1",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Configuration",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Console",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Options",
+              "requestedVersion": "8.0.2",
+              "resolvedVersion": "8.0.2",
+              "latestVersion": "9.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.IntegrationApi/Buh.IntegrationApi.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "HtmlAgilityPack",
+              "requestedVersion": "1.11.61",
+              "resolvedVersion": "1.11.61",
+              "latestVersion": "1.11.71"
+            },
+            {
+              "id": "Markdig",
+              "requestedVersion": "0.36.2",
+              "resolvedVersion": "0.36.2",
+              "latestVersion": "0.38.0"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Relational",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Abstractions",
+              "requestedVersion": "8.0.1",
+              "resolvedVersion": "8.0.1",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Configuration",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Console",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Debug",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Scrutor",
+              "requestedVersion": "4.2.2",
+              "resolvedVersion": "4.2.2",
+              "latestVersion": "5.0.2"
+            },
+            {
+              "id": "Swashbuckle.AspNetCore",
+              "requestedVersion": "6.5.0",
+              "resolvedVersion": "6.5.0",
+              "latestVersion": "7.0.0"
+            },
+            {
+              "id": "System.Text.Json",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.Persistence/Buh.Persistence.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "DocumentFormat.OpenXml",
+              "requestedVersion": "3.0.2",
+              "resolvedVersion": "3.0.2",
+              "latestVersion": "3.1.1"
+            },
+            {
+              "id": "HtmlAgilityPack",
+              "requestedVersion": "1.11.61",
+              "resolvedVersion": "1.11.61",
+              "latestVersion": "1.11.71"
+            },
+            {
+              "id": "Markdig",
+              "requestedVersion": "0.36.2",
+              "resolvedVersion": "0.36.2",
+              "latestVersion": "0.38.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Design",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Proxies",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Hosting",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.DbMigrationService/Buh.DbMigrationService.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "DocumentFormat.OpenXml",
+              "requestedVersion": "3.0.2",
+              "resolvedVersion": "3.0.2",
+              "latestVersion": "3.1.1"
+            },
+            {
+              "id": "HtmlAgilityPack",
+              "requestedVersion": "1.11.61",
+              "resolvedVersion": "1.11.61",
+              "latestVersion": "1.11.71"
+            },
+            {
+              "id": "Markdig",
+              "requestedVersion": "0.36.2",
+              "resolvedVersion": "0.36.2",
+              "latestVersion": "0.38.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Design",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Proxies",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Hosting",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/var/lib/jenkins/workspace/STJ/buh/Dependency_check/buh_dependency_scanning/src/buh/Buh.AdminApi/Buh.AdminApi.csproj",
+      "frameworks": [
+        {
+          "framework": "net8.0",
+          "topLevelPackages": [
+            {
+              "id": "DocumentFormat.OpenXml",
+              "requestedVersion": "3.0.2",
+              "resolvedVersion": "3.0.2",
+              "latestVersion": "3.1.1"
+            },
+            {
+              "id": "HtmlAgilityPack",
+              "requestedVersion": "1.11.61",
+              "resolvedVersion": "1.11.61",
+              "latestVersion": "1.11.71"
+            },
+            {
+              "id": "Markdig",
+              "requestedVersion": "0.36.2",
+              "resolvedVersion": "0.36.2",
+              "latestVersion": "0.38.0"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Relational",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Abstractions",
+              "requestedVersion": "8.0.1",
+              "resolvedVersion": "8.0.1",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Configuration",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Console",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Debug",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "9.0.0"
+            },
+            {
+              "id": "Scrutor",
+              "requestedVersion": "4.2.2",
+              "resolvedVersion": "4.2.2",
+              "latestVersion": "5.0.2"
+            },
+            {
+              "id": "Swashbuckle.AspNetCore",
+              "requestedVersion": "6.5.0",
+              "resolvedVersion": "6.5.0",
+              "latestVersion": "7.0.0"
+            },
+            {
+              "id": "System.Text.Json",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3",
+              "latestVersion": "9.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

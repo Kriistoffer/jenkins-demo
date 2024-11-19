@@ -7,7 +7,7 @@ pipeline {
         stage("Räkna sårbarheter") {
             steps {
                 script {
-                    def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
+                    def vulnerabilities = readJSON(file: "./dotnet_vulnerabilities.json")
                     def number_of_transitive = 0
                     def number_of_toplevel = 0
 
