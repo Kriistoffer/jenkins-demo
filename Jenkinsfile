@@ -37,7 +37,7 @@ pipeline {
                     for(int i = 0; i < outdated.projects.size(); i++) {
                         if (outdated.projects[i].frameworks != null) {
                             if (outdated.projects[i].frameworks[0].topLevelPackages != null) {
-                                for(int j = 0; j < outdated.projects[i].frameworks[0].topLevelPackages.size())
+                                for(int j = 0; j < outdated.projects[i].frameworks[0].topLevelPackages.size(); j++)
                                     outdated_toplevel++
                             }
                         }
@@ -46,7 +46,7 @@ pipeline {
                     for(int i = 0; i < outdated.projects.size(); i++) {
                         if (outdated.projects[i].frameworks != null) {
                             if (outdated.projects[i].frameworks[0].transitivePackages != null) {
-                                for(int j = 0; j < outdated.projects[i].frameworks[0].transitivePackages.size())
+                                for(int j = 0; j < outdated.projects[i].frameworks[0].transitivePackages.size(); j++)
                                     outdated_transitive++
                             }
                         }
