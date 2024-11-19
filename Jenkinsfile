@@ -62,7 +62,9 @@ pipeline {
                         slackSend(channel: "#team1-dependency_check", message: "- BUH - ${outdated_toplevel + outdated_transitive} utdaterade paket hittade (${outdated_toplevel} top-level och ${outdated_transitive} transitiva.)")
                     } else {
                         slackSend(channel: "#team1-dependency_check", message: "- BUH - Scanningen genomfördes ${now.format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+2"))} och inga utdaterade paket hittades")
-                    } else if (vuln_toplevel + vuln_transitive > 0) {
+                    } 
+                    
+                    if (vuln_toplevel + vuln_transitive > 0) {
                         slackSend(channel: "#team1-dependency_check", message: "- BUH - ${vuln_toplevel + vuln_transitive} sårbarheter hittade (${vuln_toplevel} top-level och ${vuln_transitive} transitiva.)")
                     } else {
                         slackSend(channel: "#team1-dependency_check", message: "- BUH - Scanningen genomfördes ${now.format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+2"))} och inga sårbarheter hittades")
