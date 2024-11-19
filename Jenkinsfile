@@ -57,7 +57,8 @@ pipeline {
                     echo "Number of outdated transitive found: ${outdated_transitive}"
 
                     int total = outdated_transitive + outdated_toplevel
-                    slackSend(channel: "#team1-dependency_check", message: "${outdated_toplevel + outdated_transitive} utdaterade paket hittade (${outdated_toplevel} top-level och ${outdated_transitive} transitiva.)")
+                    slackSend(channel: "#team1-dependency_check", message: "- BUH - ${outdated_toplevel + outdated_transitive} utdaterade paket hittade (${outdated_toplevel} top-level och ${outdated_transitive} transitiva.)")
+                    slackSend(channel: "#team1-dependency_check", message: "- BUH - ${vuln_toplevel + vuln_transitive} sårbarheter hittade (${vuln_toplevel} top-level och ${vuln_transitive} transitiva.)")
                 }
             }
         }
