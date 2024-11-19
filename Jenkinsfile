@@ -10,7 +10,6 @@ pipeline {
                     def vulnerabilities = readJSON(file: "./buh_dotnet_vulnerabilities.json")
 
                     echo "${vulnerabilities.projects[0]}"
-                    }
                 }
             }
         }
