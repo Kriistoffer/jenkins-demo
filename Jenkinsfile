@@ -12,10 +12,11 @@ pipeline {
 
                     for(int i = 0; i < vulnerabilities.projects.size(); i++) {
                         echo "i har nu värdet: ${i}"
-                    }
-                    for(int j = 0; j < vulnerabilities.projects[0].frameworks[0].transitivePackages.size(); j++) {
-                        echo "j har nu värdet: ${j}"
-                        number_of_transitive++
+                        
+                        for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
+                            echo "j har nu värdet: ${j}"
+                            number_of_transitive++
+                        }
                     }
 
 
