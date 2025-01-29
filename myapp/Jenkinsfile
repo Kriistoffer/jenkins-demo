@@ -91,11 +91,27 @@ pipeline {
                     // }
                     
                     if (vuln_toplevel + vuln_transitive > 0) {
-                        slackSend(channel: "#team1-dependency_check", message: "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low).")
+                        slackSend(channel: "#team1-dependency_check", color: setSlackMessageColor(vuln_toplevel_critical, vuln_toplevel_high, vuln_toplevel_medium, vuln_toplevel_low), message: "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low).")
                         slackSend(channel: "#team1-dependency_check", message: "Number of transitive found: ${vuln_transitive} (${vuln_transitive_critical} critical, ${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low).")
                     }
                 }
             }
         }
     }
+}
+
+def setSlackMessageColor(critical, high, medium, low) {
+    if (critical > 0) {
+        return "purple"
+    } else if (high > 0) {
+        return "red"
+    } else if (medium > 0) {
+        return "yellow"
+    } else {
+        return "white"
+    }
+}
+
+def setSlackMessageColorAlternative() {
+    
 }
