@@ -102,13 +102,13 @@ pipeline {
 
 def setSlackMessageColor(critical, high, medium, low) {
     if (critical > 0) {
-        return "purple"
+        return "#b100cd"
     } else if (high > 0) {
-        return "red"
+        return "#f101e2c"
     } else if (medium > 0) {
-        return "yellow"
+        return "#fff200"
     } else {
-        return "white"
+        return "#fffffc"
     }
 }
 
