@@ -22,25 +22,8 @@ pipeline {
                     int vuln_transitive_medium = 0
                     int vuln_transitive_low = 0
 
-                    for(int i = 0; i < vulnerabilities.projects.size(); i++) {
-                        if (vulnerabilities.projects[i].frameworks != null) {
-                            if (vulnerabilities.projects[i].frameworks[0].topLevelPackages != null) {
-                                for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].topLevelPackages.size(); j++) {
-                                    vuln_toplevel++
+                    countTopLevelVulnerabilities(vulnerabilities)
 
-                                    if (vulnerabilities.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Critical") {
-                                        vuln_toplevel_critical++
-                                    } else if (vulnerabilities.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "High") {
-                                        vuln_toplevel_high++
-                                    } else if (vulnerabilities.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Medium") {
-                                        vuln_toplevel_medium++
-                                    } else {
-                                        vuln_toplevel_low++
-                                    }
-                                }
-                            }
-                        }
-                    }
                     for(int i = 0; i < vulnerabilities.projects.size(); i++) {
                         if (vulnerabilities.projects[i].frameworks != null) {
                             if (vulnerabilities.projects[i].frameworks[0].transitivePackages != null) {
@@ -81,14 +64,7 @@ pipeline {
                     echo "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low)."
                     echo "Number of transitive found: ${vuln_transitive} (${vuln_transitive_critical} critical, ${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low)."
 
-                    // echo "Number of outdated top level found: ${outdated_toplevel}"
-                    // echo "Number of outdated transitive found: ${outdated_transitive}"
-
                     def now = new Date()
-
-                    // if (outdated_toplevel + outdated_transitive > 0) {
-                    //     slackSend(channel: "#team1-dependency_check", message: "- KRIJ - ${outdated_toplevel + outdated_transitive} utdaterade paket hittades (${outdated_toplevel} top-level och ${outdated_transitive} transitiva).", color: "danger")
-                    // }
                     
                     if (vuln_toplevel + vuln_transitive > 0) {
                         slackSend(channel: "#team1-dependency_check", color: setSlackMessageColor(vuln_toplevel_critical, vuln_toplevel_high, vuln_toplevel_medium, vuln_toplevel_low), message: "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low).")
@@ -112,6 +88,24 @@ def setSlackMessageColor(critical, high, medium, low) {
     }
 }
 
-def setSlackMessageColorAlternative() {
-    
+def countTopLevelVulnerabilities(json) {
+    for(int i = 0; i < json.projects.size(); i++) {
+        if (json.projects[i].frameworks != null) {
+            if (json.projects[i].frameworks[0].topLevelPackages != null) {
+                for(int j = 0; j < json.projects[i].frameworks[0].topLevelPackages.size(); j++) {
+                    vuln_toplevel++
+
+                    if (json.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Critical") {
+                        vuln_toplevel_critical++
+                    } else if (json.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "High") {
+                        vuln_toplevel_high++
+                    } else if (json.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Medium") {
+                        vuln_toplevel_medium++
+                    } else {
+                        vuln_toplevel_low++
+                    }
+                }
+            }
+        }
+    }
 }
