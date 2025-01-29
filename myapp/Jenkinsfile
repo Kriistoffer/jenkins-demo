@@ -13,12 +13,26 @@ pipeline {
                     int vuln_transitive = 0
                     int outdated_toplevel = 0
                     int outdated_transitive = 0
+                    int vuln_toplevel_high = 0
+                    int vuln_toplevel_medium = 0
+                    int vuln_toplevel_low = 0
+                    int vuln_transitive_high = 0
+                    int vuln_transitive_medium = 0
+                    int vuln_transitive_low = 0
 
                     for(int i = 0; i < vulnerabilities.projects.size(); i++) {
                         if (vulnerabilities.projects[i].frameworks != null) {
                             if (vulnerabilities.projects[i].frameworks[0].topLevelPackages != null) {
                                 for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].topLevelPackages.size(); j++) {
                                     vuln_toplevel++
+
+                                    if (vulnerabilities.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "High") {
+                                        vuln_toplevel_high++
+                                    } else if (vulnerabilities.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Medium") {
+                                        vuln_toplevel_medium++
+                                    } else {
+                                        vuln_toplevel_low++
+                                    }
                                 }
                             }
                         }
@@ -28,6 +42,14 @@ pipeline {
                             if (vulnerabilities.projects[i].frameworks[0].transitivePackages != null) {
                                 for(int j = 0; j < vulnerabilities.projects[i].frameworks[0].transitivePackages.size(); j++) {
                                     vuln_transitive++
+
+                                    if (vulnerabilities.projects[i].frameworks[0].transitivePackages[0].vulnerabilities[0].severity == "High") {
+                                        vuln_transitive_high++
+                                    } else if (vulnerabilities.projects[i].frameworks[0].transitivePackages[0].vulnerabilities[0].severity == "Medium") {
+                                        vuln_transitive_medium++
+                                    } else {
+                                        vuln_transitive_low++
+                                    }
                                 }
                             }
                         }
@@ -53,8 +75,8 @@ pipeline {
                     echo "Number of top level found: ${vuln_toplevel}"
                     echo "Number of transitive found: ${vuln_transitive}"
 
-                    echo "Number of outdated top level found: ${outdated_toplevel}"
-                    echo "Number of outdated transitive found: ${outdated_transitive}"
+                    // echo "Number of outdated top level found: ${outdated_toplevel}"
+                    // echo "Number of outdated transitive found: ${outdated_transitive}"
 
                     def now = new Date()
 
