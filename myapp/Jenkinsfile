@@ -23,7 +23,7 @@ pipeline {
                     def vulnerabilities = readJSON(file: "myapp/dotnet_vulnerabilities.json")
                     def outdated = readJSON(file: "myapp/dotnet_outdated.json")
 
-                    countVulnerabilities(json)
+                    countVulnerabilities(vulnerabilities)
 
                     for(int i = 0; i < outdated.projects.size(); i++) {
                         if (outdated.projects[i].frameworks != null) {
