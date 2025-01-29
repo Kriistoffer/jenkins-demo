@@ -86,16 +86,13 @@ pipeline {
 
                     def now = new Date()
 
-                    if (outdated_toplevel + outdated_transitive > 0) {
-                        slackSend(channel: "#team1-dependency_check", message: "- KRIJ - ${outdated_toplevel + outdated_transitive} utdaterade paket hittades (${outdated_toplevel} top-level och ${outdated_transitive} transitiva).", color: "danger")
-                    } else {
-                        slackSend(channel: "#team1-dependency_check", message: "- KRIJ - Dependency scanning genomfördes ${now.format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+2"))} och inga utdaterade paket hittades.", color: "good")
-                    } 
+                    // if (outdated_toplevel + outdated_transitive > 0) {
+                    //     slackSend(channel: "#team1-dependency_check", message: "- KRIJ - ${outdated_toplevel + outdated_transitive} utdaterade paket hittades (${outdated_toplevel} top-level och ${outdated_transitive} transitiva).", color: "danger")
+                    // }
                     
                     if (vuln_toplevel + vuln_transitive > 0) {
-                        slackSend(channel: "#team1-dependency_check", message: "- KRIJ - ${vuln_toplevel + vuln_transitive} sårbarheter hittades (${vuln_toplevel} top-level och ${vuln_transitive} transitiva).", color: "danger")
-                    } else {
-                        slackSend(channel: "#team1-dependency_check", message: "- KRIJ - Dependency scanning genomfördes ${now.format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+2"))} och inga sårbarheter hittades.", color: "good")
+                        slackSend(channel: "#team1-dependency_check", message: "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low).")
+                        slackSend(channel: "#team1-dependency_check", message: "Number of transitive found: ${vuln_transitive} (${vuln_transitive_critical} critical, ${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low).")
                     }
                 }
             }
