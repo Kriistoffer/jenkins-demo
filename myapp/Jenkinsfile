@@ -7,8 +7,8 @@ pipeline {
         stage("Räkna sårbarheter") {
             steps {
                 script {
-                    def vulnerabilities = readJSON(file: "./dotnet_vulnerabilities.json")
-                    def outdated = readJSON(file: "./dotnet_outdated.json")
+                    def vulnerabilities = readJSON(file: "myapp/dotnet_vulnerabilities.json")
+                    def outdated = readJSON(file: "myapp/dotnet_outdated.json")
                     int vuln_toplevel = 0
                     int vuln_transitive = 0
                     int outdated_toplevel = 0
@@ -72,8 +72,8 @@ pipeline {
                         }
                     }
 
-                    echo "Number of top level found: ${vuln_toplevel}"
-                    echo "Number of transitive found: ${vuln_transitive}"
+                    echo "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low.)"
+                    echo "Number of transitive found: ${vuln_transitive} (${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low.)"
 
                     // echo "Number of outdated top level found: ${outdated_toplevel}"
                     // echo "Number of outdated transitive found: ${outdated_transitive}"
