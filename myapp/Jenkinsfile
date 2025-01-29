@@ -13,9 +13,11 @@ pipeline {
                     int vuln_transitive = 0
                     int outdated_toplevel = 0
                     int outdated_transitive = 0
+                    int vuln_toplevel_critical = 0
                     int vuln_toplevel_high = 0
                     int vuln_toplevel_medium = 0
                     int vuln_toplevel_low = 0
+                    int vuln_transitive_critical = 0
                     int vuln_transitive_high = 0
                     int vuln_transitive_medium = 0
                     int vuln_transitive_low = 0
@@ -72,8 +74,8 @@ pipeline {
                         }
                     }
 
-                    echo "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low)."
-                    echo "Number of transitive found: ${vuln_transitive} (${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low)."
+                    echo "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low)."
+                    echo "Number of transitive found: ${vuln_transitive} (${vuln_transitive_critical} critical, ${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low)."
 
                     // echo "Number of outdated top level found: ${outdated_toplevel}"
                     // echo "Number of outdated transitive found: ${outdated_transitive}"
