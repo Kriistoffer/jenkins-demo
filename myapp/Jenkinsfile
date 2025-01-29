@@ -1,3 +1,16 @@
+int vuln_toplevel = 0
+int vuln_transitive = 0
+int outdated_toplevel = 0
+int outdated_transitive = 0
+int vuln_toplevel_critical = 0
+int vuln_toplevel_high = 0
+int vuln_toplevel_medium = 0
+int vuln_toplevel_low = 0
+int vuln_transitive_critical = 0
+int vuln_transitive_high = 0
+int vuln_transitive_medium = 0
+int vuln_transitive_low = 0
+
 pipeline {
    agent any
     tools {
@@ -9,18 +22,6 @@ pipeline {
                 script {
                     def vulnerabilities = readJSON(file: "myapp/dotnet_vulnerabilities.json")
                     def outdated = readJSON(file: "myapp/dotnet_outdated.json")
-                    int vuln_toplevel = 0
-                    int vuln_transitive = 0
-                    int outdated_toplevel = 0
-                    int outdated_transitive = 0
-                    int vuln_toplevel_critical = 0
-                    int vuln_toplevel_high = 0
-                    int vuln_toplevel_medium = 0
-                    int vuln_toplevel_low = 0
-                    int vuln_transitive_critical = 0
-                    int vuln_transitive_high = 0
-                    int vuln_transitive_medium = 0
-                    int vuln_transitive_low = 0
 
                     countTopLevelVulnerabilities(vulnerabilities)
 
