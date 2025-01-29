@@ -26,7 +26,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
                 },
                 {
@@ -64,7 +64,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
                 }
               ]
@@ -88,7 +88,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
                 },
                 {
@@ -125,7 +125,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
                 },
                 {
@@ -187,7 +187,7 @@
               "resolvedVersion": "8.0.3",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
                 },
                 {
@@ -211,7 +211,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
                 },
                 {
@@ -262,7 +262,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Low",
                   "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
                 },
                 {
@@ -286,7 +286,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
                 }
               ]
@@ -358,7 +358,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
                 },
                 {
@@ -383,7 +383,7 @@
               "resolvedVersion": "8.0.3",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Low",
                   "advisoryurl": "https://github.com/advisories/GHSA-hh2w-p6rv-4g7w"
                 },
                 {
@@ -399,7 +399,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Low",
                   "advisoryurl": "https://github.com/advisories/GHSA-qj66-m88j-hmgj"
                 }
               ]
@@ -409,7 +409,7 @@
               "resolvedVersion": "8.0.0",
               "vulnerabilities": [
                 {
-                  "severity": "High",
+                  "severity": "Medium",
                   "advisoryurl": "https://github.com/advisories/GHSA-f32c-w444-8ppv"
                 },
                 {
