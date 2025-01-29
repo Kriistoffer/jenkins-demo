@@ -24,7 +24,7 @@ pipeline {
                     def vulnerabilities = readJSON(file: "myapp/dotnet_vulnerabilities.json")
                     def outdated = readJSON(file: "myapp/dotnet_outdated.json")
 
-                    countVulnerabilities(vulnerabilities)
+                    countDotnetVulnerabilities(vulnerabilities)
                     countDotnetOutdatedPackages(outdated)
 
                     if (vuln_toplevel + vuln_transitive > 0) {
