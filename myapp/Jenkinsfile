@@ -1,15 +1,15 @@
-def vuln_toplevel
-def vuln_transitive
-def outdated_toplevel
-def outdated_transitive
-def vuln_toplevel_critical
-def vuln_toplevel_high
-def vuln_toplevel_medium
-def vuln_toplevel_low
-def vuln_transitive_critical
-def vuln_transitive_high
-def vuln_transitive_medium
-def vuln_transitive_low
+vuln_toplevel = 0
+vuln_transitive = 0
+outdated_toplevel = 0
+outdated_transitive = 0
+vuln_toplevel_critical = 0
+vuln_toplevel_high = 0
+vuln_toplevel_medium = 0
+vuln_toplevel_low = 0
+vuln_transitive_critical = 0
+vuln_transitive_high = 0
+vuln_transitive_medium = 0
+vuln_transitive_low = 0
 def now = new Date()
 
 pipeline {
@@ -28,7 +28,7 @@ pipeline {
                     countDotnetOutdatedPackages(outdated)
 
                     if (vuln_toplevel + vuln_transitive > 0) {
-                        slackSend(channel: "#team1-dependency_check", color: setSlackMessageColor(vuln_toplevel_critical, vuln_toplevel_high, vuln_toplevel_medium, vuln_toplevel_low), message: "@everyone Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low).")
+                        slackSend(channel: "#team1-dependency_check", color: setSlackMessageColor(vuln_toplevel_critical, vuln_toplevel_high, vuln_toplevel_medium, vuln_toplevel_low), message: "Number of top level found: ${vuln_toplevel} (${vuln_toplevel_critical} critical, ${vuln_toplevel_high} high, ${vuln_toplevel_medium} medium, and ${vuln_toplevel_low} low).")
                         slackSend(channel: "#team1-dependency_check", color: setSlackMessageColor(vuln_transitive_critical, vuln_transitive_high, vuln_transitive_medium, vuln_transitive_low), message: "Number of transitive found: ${vuln_transitive} (${vuln_transitive_critical} critical, ${vuln_transitive_high} high, ${vuln_transitive_medium} medium, and ${vuln_transitive_low} low).")
                     }
                 }
