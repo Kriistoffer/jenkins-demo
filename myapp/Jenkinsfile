@@ -1,15 +1,15 @@
-vuln_toplevel
-vuln_transitive
-outdated_toplevel
-outdated_transitive
-vuln_toplevel_critical
-vuln_toplevel_high
-vuln_toplevel_medium
-vuln_toplevel_low
-vuln_transitive_critical
-vuln_transitive_high
-vuln_transitive_medium
-vuln_transitive_low
+def vuln_toplevel
+def vuln_transitive
+def outdated_toplevel
+def outdated_transitive
+def vuln_toplevel_critical
+def vuln_toplevel_high
+def vuln_toplevel_medium
+def vuln_toplevel_low
+def vuln_transitive_critical
+def vuln_transitive_high
+def vuln_transitive_medium
+def vuln_transitive_low
 def now = new Date()
 
 pipeline {
