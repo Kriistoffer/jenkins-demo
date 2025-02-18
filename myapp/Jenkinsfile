@@ -74,16 +74,10 @@ def countDotnetVulnerabilities(json) {
         if (json.projects[i].frameworks != null) {
             if (json.projects[i].frameworks[0].topLevelPackages != null) {
                 for(int j = 0; j < json.projects[i].frameworks[0].topLevelPackages.size(); j++) {
-                    vuln_toplevel++
-
-                    if (json.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Critical") {
-                        vuln_toplevel_critical++
-                    } else if (json.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "High") {
-                        vuln_toplevel_high++
-                    } else if (json.projects[i].frameworks[0].topLevelPackages[0].vulnerabilities[0].severity == "Medium") {
-                        vuln_toplevel_medium++
-                    } else {
-                        vuln_toplevel_low++
+                    if (json.projects[i].frameworks[0].topLevelPackages[j] != null) {
+                        for (int k = 0; j < json.projects[i].frameworks[0].topLevelPackages[k].vulnerabilities.size(); k++) {
+                            vuln_toplevel++
+                        }
                     }
                 }
             }
