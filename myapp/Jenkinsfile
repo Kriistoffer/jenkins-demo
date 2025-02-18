@@ -78,6 +78,16 @@ def countDotnetVulnerabilities(json) {
                         for (int k = 0; k < json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities.size(); k++) {
                             if (json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities[k] != null) {
                                 vuln_toplevel++
+
+                                if (json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities[k].severity == "Critical") {
+                                    vuln_toplevel_critical++
+                                } else if (json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities[k].severity == "High") {
+                                    vuln_toplevel_high++
+                                } else if (json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities[k].severity == "Medium") {
+                                    vuln_toplevel_medium++
+                                } else {
+                                    vuln_toplevel_low++
+                                }
                             }
                         }
                     }
@@ -85,21 +95,6 @@ def countDotnetVulnerabilities(json) {
             }
         }
     }
-
-    // for(int i = 0; i < json.projects.size(); i++) {
-    //     if (json.projects[i].frameworks != null) {
-    //         if (json.projects[i].frameworks[0].topLevelPackages != null) {
-    //             for(int j = 0; j < json.projects[i].frameworks[0].topLevelPackages.size(); j++) {
-    //                 if (json.projects[i].frameworks[0].topLevelPackages[j] != null) {
-    //                     for (int k = 0; j < json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities.size(); k++) {
-    //                         vuln_toplevel++
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
 
     for (int i = 0; i < json.projects.size(); i++) {
         if (json.projects[i].frameworks != null) {
