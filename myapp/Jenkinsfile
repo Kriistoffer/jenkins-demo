@@ -1,15 +1,15 @@
-int vuln_toplevel = 0
-int vuln_transitive = 0
-int outdated_toplevel = 0
-int outdated_transitive = 0
-int vuln_toplevel_critical = 0
-int vuln_toplevel_high = 0
-int vuln_toplevel_medium = 0
-int vuln_toplevel_low = 0
-int vuln_transitive_critical = 0
-int vuln_transitive_high = 0
-int vuln_transitive_medium = 0
-int vuln_transitive_low = 0
+vuln_toplevel
+vuln_transitive
+outdated_toplevel
+outdated_transitive
+vuln_toplevel_critical
+vuln_toplevel_high
+vuln_toplevel_medium
+vuln_toplevel_low
+vuln_transitive_critical
+vuln_transitive_high
+vuln_transitive_medium
+vuln_transitive_low
 def now = new Date()
 
 pipeline {
