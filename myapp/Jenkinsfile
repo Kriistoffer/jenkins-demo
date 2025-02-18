@@ -58,17 +58,17 @@ def setSlackMessageColor(critical, high, medium, low) {
 }
 
 def countDotnetVulnerabilities(json) {
-    vuln_toplevel = 0
-    vuln_transitive = 0
+    // vuln_toplevel = 0
+    // vuln_transitive = 0
 
-    vuln_toplevel_critical = 0
-    vuln_toplevel_high = 0
-    vuln_toplevel_medium = 0
-    vuln_toplevel_low = 0
-    vuln_transitive_critical = 0
-    vuln_transitive_high = 0
-    vuln_transitive_medium = 0
-    vuln_transitive_low = 0
+    // vuln_toplevel_critical = 0
+    // vuln_toplevel_high = 0
+    // vuln_toplevel_medium = 0
+    // vuln_toplevel_low = 0
+    // vuln_transitive_critical = 0
+    // vuln_transitive_high = 0
+    // vuln_transitive_medium = 0
+    // vuln_transitive_low = 0
 
     for (int i = 0; i < json.projects.size(); i++) {
         if (json.projects[i].frameworks != null) {
