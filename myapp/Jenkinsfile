@@ -75,7 +75,7 @@ def countDotnetVulnerabilities(json) {
             if (json.projects[i].frameworks[0].topLevelPackages != null) {
                 for(int j = 0; j < json.projects[i].frameworks[0].topLevelPackages.size(); j++) {
                     if (json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities != null) {
-                        for (int k = 0; j < json.projects[i].frameworks[0].topLevelPackages[k].vulnerabilities.size(); k++) {
+                        for (int k = 0; j < json.projects[i].frameworks[0].topLevelPackages[j].vulnerabilities.size(); k++) {
                             vuln_toplevel++
                         }
                     }
