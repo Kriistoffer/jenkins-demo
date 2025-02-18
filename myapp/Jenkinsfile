@@ -101,9 +101,19 @@ def countDotnetVulnerabilities(json) {
             if (json.projects[i].frameworks[0].transitivePackages != null) {
                 for (int j = 0; j < json.projects[i].frameworks[0].transitivePackages.size(); j++) {
                     if (json.projects[i].frameworks[0].transitivePackages[j] != null) {
-                        for (int k = 0; k < json.projects[i].frameworks[0].transitivePackages.vulnerabilities.size(); k++) {
-                            if (json.projects[i].frameworks[0].transitivePackages.vulnerabilities[k]) {
+                        for (int k = 0; k < json.projects[i].frameworks[0].transitivePackages[j].vulnerabilities.size(); k++) {
+                            if (json.projects[i].frameworks[0].transitivePackages[j].vulnerabilities[k]) {
                                 vuln_transitive++
+
+                                if (json.projects[i].frameworks[0].transitivePackages[0].vulnerabilities[0].severity == "Critical") {
+                                    vuln_transitive_critical++
+                                } else if (json.projects[i].frameworks[0].transitivePackages[0].vulnerabilities[0].severity == "High") {
+                                    vuln_transitive_high++
+                                } else if (json.projects[i].frameworks[0].transitivePackages[0].vulnerabilities[0].severity == "Medium") {
+                                    vuln_transitive_medium++
+                                } else {
+                                    vuln_transitive_low++
+                                }
                             }
                         }
                     }
